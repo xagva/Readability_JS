@@ -5,6 +5,13 @@
 
 	<body>
 
+	<input id ="numb" type = "text">
+	<button type="button" onclick="myFunction()">Check</button>
+
+	<p id="demo"></p>
+	
+	<script>
+
 	function new_count(word)
 	{
 	if(word.length<=3){ return 1; }
@@ -12,6 +19,6 @@
 	word = word.replace(/^y/,'');
 	return word.match(/[aeiouy]{1,2}/g).length;
 	}
-
+	</script>
 	</body>
 </html>
