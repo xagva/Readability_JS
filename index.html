@@ -6,7 +6,7 @@
 	<body>
 
 	<input id ="numb" type = "text">
-	<button type="button" onclick="myFunction()">Check</button>
+	<button type="button" onclick="grade()">Check</button>
 
 	<p id="demo"></p>
 	
@@ -37,7 +37,12 @@
 		}
 	
 	var syllab = function new_count(numb);
-
+	
+		function grade(n,m,syllab)
+		{
+			var f =( 206.835 - 1.015 * (n/m) -84.6 * (syllab/n));
+			return f;
+		}
 	</script>
 	</body>
 </html>
