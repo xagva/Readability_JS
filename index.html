@@ -8,9 +8,9 @@
 	<input id ="numb" type = "text">
 	<button type="button" onclick="grade()">Check</button>
 
-	<p id="demo"></p>
+	<p id="demo">grade will come here</p>
 	
-	<script>
+	<script>    
 		function word_count(numb)
 		{
 			var str = numb;
@@ -41,7 +41,7 @@
 		function grade(n,m,syllab)
 		{
 			var f =( 206.835 - 1.015 * (n/m) -84.6 * (syllab/n));
-			document.getElementById("demo").innerhtml = f;
+			document.getElementById("demo").innerhtml ="f";
 		}
 	</script>
 	</body>
