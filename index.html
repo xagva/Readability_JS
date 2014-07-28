@@ -1,6 +1,68 @@
 <html>
 	<head>
+	<Script type="text/javascript">
+	alert("hello!!");
 
+
+	var word,temp,syllab,res,n,m,res,x,f,temp;
+
+	syllab = 0;
+
+
+
+	function word_count(x)
+	{
+		var str = x;
+		res = str.split(" ");
+		return res.length;
+	}
+
+
+
+
+	function line_count(x)
+	{
+		var str = x;
+		var res == str.split(".");
+		return res.length;
+	}
+
+
+
+
+	function new_count(word){
+	word = word.toLowerCase();
+	  if(word.length <= 3) { return 1;}
+	word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+	word = word.replace(/^y/, '');
+	return word.match(/[aeiouy]{12}/g).length;
+	}
+
+
+
+	function grade()
+	{
+
+	x = document.getElementById("numb").value;
+
+	n  word_count(x);
+
+	m = line_count(x);
+
+
+
+	for(var i=0;i<n;i++)
+	{
+
+	temp = new_count(res[i]);
+
+	syllab = syllab + temp;
+	}
+
+	f = ( 206.835 - 1.015 * (n/m) - 84.6 * (syllab)/n);
+
+	document.getElementById("demo").innerHtml = f;
+	}</sccript>
 	</head>
 
 	<body>
@@ -9,40 +71,5 @@
 	<button type="button" onclick="grade()">Check</button>
 
 	<p id="demo">grade will come here</p>
-	
-	<script>    
-		function word_count(numb)
-		{
-			var str = numb;
-			var res = str.split(" ");
-			return res.length;
-		}
-	var n = function word_count(numb);
-		
-		function line_count(numb)
-		{
-			var str = numb;
-			var res = str.split(".");
-			return res.length;
-		}
-	var m = function line_count(numb);
-
-
-		function new_count(numb)
-		{
-			if(word.length<=3){ return 1; }
-			word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)/,$'');
-			word = word.replace(/^y/,'');
-			return word.match(/[aeiouy]{1,2}/g).length;
-		}
-	
-	var syllab = function new_count(numb);
-	
-		function grade(n,m,syllab)
-		{
-			var f =( 206.835 - 1.015 * (n/m) -84.6 * (syllab/n));
-			document.getElementById("demo").innerhtml =f;
-		}
-	</script>
 	</body>
 </html>
